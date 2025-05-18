@@ -19,7 +19,7 @@
     "emulator:blobstorage:start": "docker-compose -f BlobStorage/docker-compose.yml up",
     "emulator:blobstorage:stop": "docker-compose -f BlobStorage/docker-compose.yml down",
     "start:blobstorage:publisher": "cd BlobStorage/BlobStoragePublisher && dotnet run",
-    "start:blobstorage:receiver": "cd BlobStorage/BlobStorageReceiver && func start"
+    "start:blobstorage:receiver": "cd BlobStorage/BlobStorageReceiver && dotnet run"
   },
   "keywords": [],
   "author": "",
