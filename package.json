@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:eventgrid": "cd EventGrid/EventGridReceiver && func start",
-    "trigger:eventgrid": "cd EventGrid/EventGridPublisher && dotnet run"
+    "trigger:eventgrid": "cd EventGrid/EventGridPublisher && dotnet run",
+    "emulator:eventgrid:start": "docker-compose -f EventGrid/docker-compose.yml up",
+    "emulator:eventgrid:stop": "docker-compose -f EventGrid/docker-compose.yml down"
   },
   "keywords": [],
   "author": "",

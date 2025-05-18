@@ -38,25 +38,21 @@ This project uses the [Workleap Azure Event Grid Emulator](https://github.com/wo
 
 ### Running the Emulator
 
-1. Start the emulator using Docker:
+1. Start the emulator using Docker Compose:
 
 ```powershell
-docker run -it --rm -p 6500:6500 -v "${PWD}/Emulator/applicationsettings.json:/app/appsettings.json" --add-host=host.docker.internal:host-gateway workleap/eventgridemulator
+npm run emulator:eventgrid:start
 ```
 
-The flags used:
-- `-it`: 
-  - `-i` (interactive): Keeps STDIN open even if not attached
-  - `-t` (tty): Allocates a pseudo-TTY
-  - Together, these flags allow you to see the container's output in real-time and interact with it if needed
-- `--rm`: Automatically removes the container when it exits, preventing container clutter and ensuring a clean state each time you start the emulator
-- `-p 6500:6500`: Maps the container's port 6500 to the host's port 6500
-- `-v`: Mounts the local applicationsettings.json file into the container
-- `--add-host`: Allows the container to reach the host machine
+This will start the Event Grid emulator using Docker Compose, mounting the configuration and exposing port 6500. (The docker-compose.yml file is now located in the EventGrid directory.)
 
-To stop the emulator, press `Ctrl+C` in the terminal where it's running.
+To stop the emulator, run:
 
-### Emulator Configuration
+```powershell
+npm run emulator:eventgrid:stop
+```
+
+## Emulator Configuration
 
 The emulator is configured using `Emulator/applicationsettings.json`. This file defines the topics and their associated webhooks:
 
@@ -177,6 +173,8 @@ The project includes the following npm scripts:
 
 - `npm run start:eventgrid`: Starts the Azure Function receiver for the Event Grid demo
 - `npm run trigger:eventgrid`: Runs the Event Grid publisher demo
+- `npm run emulator:eventgrid:start`: Starts the Event Grid emulator using Docker Compose (from EventGrid/docker-compose.yml)
+- `npm run emulator:eventgrid:stop`: Stops the Event Grid emulator (from EventGrid/docker-compose.yml)
 
 ## Notes on the Event Grid Emulator
 
