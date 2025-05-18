@@ -6,13 +6,13 @@ This repository contains several projects that demonstrate how to use local emul
 
 - **EventGrid**: A demo for Azure Event Grid, including a local emulator, publisher, and receiver. See [EventGrid/README.md](./EventGrid/README.md) for details.
 - **API**: A demo for API Emulation using WireMock, including a local emulator and a console application. See [API/README.md](./API/README.md) for details.
+- **ServiceBus**: A demo for Azure Service Bus, including the official Microsoft emulator, publisher, and receiver. See [ServiceBus/README.md](./ServiceBus/README.md) for details.
 
 ## Planned Demos
 
 The following emulator demos are planned and will be added soon:
 
 - **AzureCosmos**: Demo for Azure Cosmos DB Emulator
-- **ServiceBus**: Demo for Azure Service Bus Emulator
 - **BlobStorage**: Demo for Azure Storage Emulator (Blob)
 
 ## How to Use
