@@ -15,7 +15,11 @@
     "start:servicebus": "cd ServiceBus/ServiceBusReceiver && func start",
     "trigger:servicebus": "cd ServiceBus/ServiceBusPublisher && dotnet run",
     "emulator:servicebus:start": "docker-compose -f ServiceBus/docker-compose.yml up",
-    "emulator:servicebus:stop": "docker-compose -f ServiceBus/docker-compose.yml down"
+    "emulator:servicebus:stop": "docker-compose -f ServiceBus/docker-compose.yml down",
+    "emulator:blobstorage:start": "docker-compose -f BlobStorage/docker-compose.yml up",
+    "emulator:blobstorage:stop": "docker-compose -f BlobStorage/docker-compose.yml down",
+    "start:blobstorage:publisher": "cd BlobStorage/BlobStoragePublisher && dotnet run",
+    "start:blobstorage:receiver": "cd BlobStorage/BlobStorageReceiver && func start"
   },
   "keywords": [],
   "author": "",
