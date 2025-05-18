@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  wiremock:
+    image: wiremock/wiremock:latest
+    container_name: wiremock-emulator
+    ports:
+      - "5000:8080"
+    volumes:
+      - ./Emulator/stubs.json:/home/wiremock/mappings/stubs.json

@@ -8,7 +8,10 @@
     "start:eventgrid": "cd EventGrid/EventGridReceiver && func start",
     "trigger:eventgrid": "cd EventGrid/EventGridPublisher && dotnet run",
     "emulator:eventgrid:start": "docker-compose -f EventGrid/docker-compose.yml up",
-    "emulator:eventgrid:stop": "docker-compose -f EventGrid/docker-compose.yml down"
+    "emulator:eventgrid:stop": "docker-compose -f EventGrid/docker-compose.yml down",
+    "start:api": "cd API/APIPublisher && dotnet run",
+    "emulator:api:start": "docker-compose -f API/docker-compose.yml up",
+    "emulator:api:stop": "docker-compose -f API/docker-compose.yml down"
   },
   "keywords": [],
   "author": "",

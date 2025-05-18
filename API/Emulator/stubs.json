@@ -1,0 +1,33 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/resource"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "message": "GET response from WireMock"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/api/resource",
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$[?(@.key == 'value')]"
+          }
+        ]
+      },
+      "response": {
+        "status": 201,
+        "jsonBody": {
+          "message": "POST response from WireMock"
+        }
+      }
+    }
+  ]
+}
