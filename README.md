@@ -13,18 +13,17 @@ The following emulator demos are planned and will be added soon:
 - **AzureCosmos**: Demo for Azure Cosmos DB Emulator
 - **ServiceBus**: Demo for Azure Service Bus Emulator
 - **BlobStorage**: Demo for Azure Storage Emulator (Blob)
+- **API**: Demo for API Emulation using WireMock
 
 ## How to Use
 
 Each demo contains its own README with setup and usage instructions. To get started, navigate to the demo folder and follow the instructions provided.
 
 ## Prerequisites
-
-- [Node.js](https://nodejs.org/) (for npm scripts)
-- [Docker](https://www.docker.com/products/docker-desktop/) (for running most emulators)
-- [.NET SDK](https://dotnet.microsoft.com/download) (for .NET-based demos)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local) (for Azure Functions demos)
-
+- Node.js 20.x
+- Docker Desktop
+- .NET 8.0 SDK
+- Azure Functions Core Tools 4.x
 ---
 
 Contributions and suggestions for additional emulator demos are welcome! 

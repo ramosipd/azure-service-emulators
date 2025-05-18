@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  eventgrid-emulator:
+    image: workleap/eventgridemulator
+    container_name: eventgrid-emulator
+    ports:
+      - "6500:6500"
+    volumes:
+      - ./Emulator/applicationsettings.json:/app/appsettings.json
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true
+    stdin_open: true 
