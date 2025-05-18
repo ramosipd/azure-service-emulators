@@ -1,0 +1,14 @@
+{
+    "ServiceBus": {
+        "Queues": [
+            {
+                "Name": "queue1",
+                "MaxSizeInMegabytes": 1024,
+                "DefaultMessageTimeToLive": "14.00:00:00",
+                "LockDuration": "00:00:30"
+            }
+        ],
+        "Topics": [],
+        "Subscriptions": []
+    }
+}

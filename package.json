@@ -11,7 +11,11 @@
     "emulator:eventgrid:stop": "docker-compose -f EventGrid/docker-compose.yml down",
     "start:api": "cd API/APIPublisher && dotnet run",
     "emulator:api:start": "docker-compose -f API/docker-compose.yml up",
-    "emulator:api:stop": "docker-compose -f API/docker-compose.yml down"
+    "emulator:api:stop": "docker-compose -f API/docker-compose.yml down",
+    "start:servicebus": "cd ServiceBus/ServiceBusReceiver && func start",
+    "trigger:servicebus": "cd ServiceBus/ServiceBusPublisher && dotnet run",
+    "emulator:servicebus:start": "docker-compose -f ServiceBus/docker-compose.yml up",
+    "emulator:servicebus:stop": "docker-compose -f ServiceBus/docker-compose.yml down"
   },
   "keywords": [],
   "author": "",
