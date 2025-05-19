@@ -112,6 +112,29 @@ The receiver's configuration is stored in `local.settings.json`. Make sure to up
 }
 ```
 
+## Local Settings
+
+The `local.settings.json` file is crucial for local development of Azure Functions. This file contains configuration settings that are used when running the function app locally. Here are the key points about local settings:
+
+### Important Notes
+- The `local.settings.json` file should never be committed to source control as it may contain sensitive information
+- It's recommended to add `local.settings.json` to your `.gitignore` file
+- A template file (`local.settings.template.json`) should be provided in source control as a reference
+
+### Required Settings
+- `AzureWebJobsStorage`: Connection string for Azure Storage (use "UseDevelopmentStorage=true" for local development)
+- `FUNCTIONS_WORKER_RUNTIME`: Specifies the language runtime (dotnet-isolated for .NET isolated process)
+- `ServiceBusConnection`: Connection string for Azure Service Bus (points to local emulator in development)
+
+### Optional Settings
+- `FUNCTIONS_HTTPWORKER_PORT`: Port number for the HTTP worker (defaults to 7071)
+- `IsEncrypted`: Set to false for local development
+
+### Creating Local Settings
+1. Copy `local.settings.template.json` to `local.settings.json`
+2. Update the values as needed for your local environment
+3. Ensure the ServiceBusConnection string matches your emulator configuration
+
 ## Notes on the Service Bus Emulator
 
 - The emulator is the official Microsoft Azure Service Bus emulator.
