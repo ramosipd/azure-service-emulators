@@ -138,7 +138,6 @@ The `local.settings.json` file is crucial for local development of Azure Functio
 ## Notes on the Service Bus Emulator
 
 - The emulator is the official Microsoft Azure Service Bus emulator.
-- It requires SQL Edge as a dependency for message persistence.
 - The emulator runs on port 5672 for AMQP and 5300 for management.
 - Authentication is handled through SAS tokens.
 - Messages are persisted in the SQL Edge database.

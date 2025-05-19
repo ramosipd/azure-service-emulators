@@ -8,14 +8,6 @@ The project consists of the following main component:
 
 1. **Cosmos DB Publisher** (`CosmosDBPublisher/Program.cs`): A .NET console application that interacts with a Cosmos DB instance.
 
-## Prerequisites
-
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
-- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [Node.js](https://nodejs.org/) (which includes npm)
-- [Docker](https://www.docker.com/products/docker-desktop/) (for running the Cosmos DB emulator)
-
 ## Project Structure
 
 - **`CosmosDBPublisher/`**: Contains the publisher application
@@ -51,6 +43,8 @@ var options = new CosmosClientOptions
     }),
     ConnectionMode = ConnectionMode.Gateway
 };
+
+using CosmosClient client = new CosmosClient(accountEndpoint, authKeyOrResourceToken, options);
 ```
 
 ## Getting Started

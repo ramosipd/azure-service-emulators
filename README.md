@@ -15,10 +15,11 @@ This repository contains several projects that demonstrate how to use local emul
 Each demo contains its own README with setup and usage instructions. To get started, navigate to the demo folder and follow the instructions provided.
 
 ## Prerequisites
-- Node.js 20.x
-- Docker Desktop
-- .NET 8.0 SDK
-- Azure Functions Core Tools 4.x
+The demos are built and tested using below dependency versions. it may work for other versions that is greater than or equal to the versions below:
+- npm 11.2.0
+- Docker Desktop - Docker version 28.1.1, build 4eba377
+- .NET 8.0.408 SDK
+- Azure Functions Core Tools 4.0.7030
 
 ## Using npm Scripts
 
@@ -36,6 +37,7 @@ npm run build:eventgrid     # Build EventGrid demo
 npm run build:api          # Build API demo
 npm run build:servicebus   # Build ServiceBus demo
 npm run build:blobstorage  # Build BlobStorage demo
+npm run build:cosmosdb     # Build CosmosDB demo
 ```
 
 3. Available scripts for each demo:

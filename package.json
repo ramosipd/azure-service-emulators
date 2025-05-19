@@ -1,10 +1,9 @@
 {
   "name": "azureserviceemulators",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Azure Service Emulators",
   "scripts": {
-    "_label": "Scripts organized by service type: Build, EventGrid, API, ServiceBus, and BlobStorage",
+    "_label": "Scripts organized by service type: Build, EventGrid, API, ServiceBus, BlobStorage, and CosmosDB",
     "test": "echo \"Error: no test specified\" && exit 1",
     
     "_build_commands": "Build Commands",
