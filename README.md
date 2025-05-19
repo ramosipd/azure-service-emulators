@@ -8,12 +8,7 @@ This repository contains several projects that demonstrate how to use local emul
 - **API**: A demo for API Emulation using WireMock, including a local emulator and a console application. See [API/README.md](./API/README.md) for details.
 - **ServiceBus**: A demo for Azure Service Bus, including the official Microsoft emulator, publisher, and receiver. See [ServiceBus/README.md](./ServiceBus/README.md) for details.
 - **BlobStorage**: A demo for Azure Storage Emulator (Blob), including a publisher and receiver console application. See [BlobStorage/README.md](./BlobStorage/README.md) for details.
-
-## Planned Demos
-
-The following emulator demos are planned and will be added soon:
-
-- **AzureCosmos**: Demo for Azure Cosmos DB Emulator
+- **CosmosDB**: A demo for Azure Cosmos DB Emulator, including a publisher application. See [CosmosDB/README.md](./CosmosDB/README.md) for details.
 
 ## How to Use
 
