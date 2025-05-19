@@ -4,22 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "_label": "Scripts organized by service type: Build, EventGrid, API, ServiceBus, and BlobStorage",
     "test": "echo \"Error: no test specified\" && exit 1",
+    
+    "_build_commands": "Build Commands",
+    "build:eventgrid": "dotnet build EventGrid/EventGridReceiver/EventGridReceiver.csproj && dotnet build EventGrid/EventGridPublisher/EventGridPublisher.csproj",
+    "build:api": "dotnet build API/APIPublisher/APIPublisher.csproj",
+    "build:servicebus": "dotnet build ServiceBus/ServiceBusReceiver/ServiceBusReceiver.csproj && dotnet build ServiceBus/ServiceBusPublisher/ServiceBusPublisher.csproj",
+    "build:blobstorage": "dotnet build BlobStorage/BlobStoragePublisher/BlobStoragePublisher.csproj && dotnet build BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj",
+    "build:all": "npm run build:eventgrid && npm run build:api && npm run build:servicebus && npm run build:blobstorage",
+
+    "_eventgrid_commands": "EventGrid Commands",
     "start:eventgrid": "cd EventGrid/EventGridReceiver && func start",
-    "trigger:eventgrid": "cd EventGrid/EventGridPublisher && dotnet run",
+    "trigger:eventgrid": "dotnet run --project EventGrid/EventGridPublisher/EventGridPublisher.csproj",
     "emulator:eventgrid:start": "docker-compose -f EventGrid/docker-compose.yml up",
     "emulator:eventgrid:stop": "docker-compose -f EventGrid/docker-compose.yml down",
-    "start:api": "cd API/APIPublisher && dotnet run",
+
+    "_api_commands": "API Commands",
+    "start:api": "dotnet run --project API/APIPublisher/APIPublisher.csproj",
     "emulator:api:start": "docker-compose -f API/docker-compose.yml up",
     "emulator:api:stop": "docker-compose -f API/docker-compose.yml down",
+
+    "_servicebus_commands": "ServiceBus Commands",
     "start:servicebus": "cd ServiceBus/ServiceBusReceiver && func start",
-    "trigger:servicebus": "cd ServiceBus/ServiceBusPublisher && dotnet run",
+    "trigger:servicebus": "dotnet run --project ServiceBus/ServiceBusPublisher/ServiceBusPublisher.csproj",
     "emulator:servicebus:start": "docker-compose -f ServiceBus/docker-compose.yml up",
     "emulator:servicebus:stop": "docker-compose -f ServiceBus/docker-compose.yml down",
+
+    "_blobstorage_commands": "BlobStorage Commands",
     "emulator:blobstorage:start": "docker-compose -f BlobStorage/docker-compose.yml up",
     "emulator:blobstorage:stop": "docker-compose -f BlobStorage/docker-compose.yml down",
-    "start:blobstorage:publisher": "cd BlobStorage/BlobStoragePublisher && dotnet run",
-    "start:blobstorage:receiver": "cd BlobStorage/BlobStorageReceiver && dotnet run"
+    "start:blobstorage:publisher": "dotnet run --project BlobStorage/BlobStoragePublisher/BlobStoragePublisher.csproj",
+    "start:blobstorage:receiver": "dotnet run --project BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj"
   },
   "keywords": [],
   "author": "",

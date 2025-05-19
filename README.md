@@ -34,40 +34,16 @@ This repository uses npm scripts to simplify running the demos. After cloning th
 npm install
 ```
 
-2. Available scripts for each demo:
+2. Build the demos:
+```powershell
+npm run build:all           # Build all demos
+npm run build:eventgrid     # Build EventGrid demo
+npm run build:api          # Build API demo
+npm run build:servicebus   # Build ServiceBus demo
+npm run build:blobstorage  # Build BlobStorage demo
+```
+
+3. Available scripts for each demo:
 
 ### EventGrid Demo
-```powershell
-npm run start:eventgrid        # Start the EventGrid receiver
-npm run trigger:eventgrid      # Run the EventGrid publisher
-npm run emulator:eventgrid:start  # Start the EventGrid emulator
-npm run emulator:eventgrid:stop   # Stop the EventGrid emulator
 ```
-
-### BlobStorage Demo
-```powershell
-npm run trigger:blobstorage    # Run the BlobStorage publisher
-npm run receive:blobstorage    # Run the BlobStorage receiver
-npm run emulator:blobstorage:start  # Start the BlobStorage emulator
-npm run emulator:blobstorage:stop   # Stop the BlobStorage emulator
-```
-
-### ServiceBus Demo
-```powershell
-npm run start:servicebus       # Start the ServiceBus receiver
-npm run trigger:servicebus     # Run the ServiceBus publisher
-npm run emulator:servicebus:start  # Start the ServiceBus emulator
-npm run emulator:servicebus:stop   # Stop the ServiceBus emulator
-```
-
-### API Demo
-```powershell
-npm run start:api             # Start the API emulator
-npm run trigger:api           # Run the API client
-```
-
-For more details about each demo, please refer to their respective README files.
-
----
-
-Contributions and suggestions for additional emulator demos are welcome! 

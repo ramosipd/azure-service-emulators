@@ -142,16 +142,24 @@ var client = new EventGridPublisherClient(
 
 ### Event Grid Receiver
 
-The receiver's configuration is stored in `local.settings.json`. Make sure to update the following settings:
+The receiver's configuration is stored in `local.settings.json`. The following settings are required:
 
 ```json
 {
+    "IsEncrypted": false,
     "Values": {
-        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
-    }
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+        "AzureWebJobsSecretStorageType": "Files"
+    },
+    "ConnectionStrings": {}
 }
 ```
+
+Key settings explained:
+- `IsEncrypted`: Set to `false` for local development
+- `FUNCTIONS_WORKER_RUNTIME`: Set to `dotnet-isolated` for .NET isolated process model
+- `AzureWebJobsSecretStorageType`: Set to `Files` to store secrets locally instead of Azure Blob storage
+- `ConnectionStrings`: Empty object for local development
 
 ## Development
 
