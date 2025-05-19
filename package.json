@@ -12,7 +12,8 @@
     "build:api": "dotnet build API/APIPublisher/APIPublisher.csproj",
     "build:servicebus": "dotnet build ServiceBus/ServiceBusReceiver/ServiceBusReceiver.csproj && dotnet build ServiceBus/ServiceBusPublisher/ServiceBusPublisher.csproj",
     "build:blobstorage": "dotnet build BlobStorage/BlobStoragePublisher/BlobStoragePublisher.csproj && dotnet build BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj",
-    "build:all": "npm run build:eventgrid && npm run build:api && npm run build:servicebus && npm run build:blobstorage",
+    "build:cosmosdb": "dotnet build CosmosDB/CosmosDBPublisher/CosmosDBPublisher.csproj",
+    "build:all": "npm run build:eventgrid && npm run build:api && npm run build:servicebus && npm run build:blobstorage && npm run build:cosmosdb",
 
     "_eventgrid_commands": "EventGrid Commands",
     "start:eventgrid": "cd EventGrid/EventGridReceiver && func start",
@@ -35,7 +36,11 @@
     "emulator:blobstorage:start": "docker-compose -f BlobStorage/docker-compose.yml up",
     "emulator:blobstorage:stop": "docker-compose -f BlobStorage/docker-compose.yml down",
     "start:blobstorage:publisher": "dotnet run --project BlobStorage/BlobStoragePublisher/BlobStoragePublisher.csproj",
-    "start:blobstorage:receiver": "dotnet run --project BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj"
+    "start:blobstorage:receiver": "dotnet run --project BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj",
+
+    "_cosmosdb_commands": "CosmosDB Commands",
+    "emulator:cosmosdb:start": "docker run --rm -it --publish 8081:8081 --publish 1234:1234 mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-preview --protocol https",
+    "start:cosmosdb": "dotnet run --project CosmosDB/CosmosDBPublisher/CosmosDBPublisher.csproj"
   },
   "keywords": [],
   "author": "",
