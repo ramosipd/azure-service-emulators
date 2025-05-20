@@ -1,46 +1,23 @@
-# Azure Emulator Demos
+# Azure Service Emulators
 
-This repository contains several projects that demonstrate how to use local emulators for various Azure services. Each demo is organized in its own folder and provides a working example of how to develop and test against Azure service emulators locally, without needing access to real Azure resources.
+## Overview
+This project contains multiple demos for Azure Service emulators. Each demo showcases a particular Azure service integration, and further instructions are provided in each demo's README file.
 
-## Available Demos
+## Demos
+- [API](API/README.md) - Demonstrates how to use the API emulator using [WireMock emulator](https://hub.docker.com/r/wiremock/wiremock).
+- [BlobStorage](BlobStorage/README.md) - Demonstrates how to use the Blob Storage emulator using [Azurite](https://hub.docker.com/r/microsoft/azure-storage-azurite).
+- [CosmosDB](CosmosDB/README.md) - Demonstrates how to use the Cosmos DB emulator using [cosmos-db emulator (linux)](https://learn.microsoft.com/en-us/azure/cosmos-db/emulator-linux).
+- [EventGrid](EventGrid/README.md) - Demonstrates how to use the Event Grid emulator using third-party [emulator](https://github.com/workleap/wl-eventgrid-emulator).
+- [ServiceBus](ServiceBus/README.md) - Demonstrates how to use the [Service Bus emulator](https://hub.docker.com/r/microsoft/azure-messaging-servicebus-emulator).
 
-- **EventGrid**: A demo for Azure Event Grid, including a local emulator, publisher, and receiver. See [EventGrid/README.md](./EventGrid/README.md) for details.
-- **API**: A demo for API Emulation using WireMock, including a local emulator and a console application. See [API/README.md](./API/README.md) for details.
-- **ServiceBus**: A demo for Azure Service Bus, including the official Microsoft emulator, publisher, and receiver. See [ServiceBus/README.md](./ServiceBus/README.md) for details.
-- **BlobStorage**: A demo for Azure Storage Emulator (Blob), including a publisher and receiver console application. See [BlobStorage/README.md](./BlobStorage/README.md) for details.
-- **CosmosDB**: A demo for Azure Cosmos DB Emulator, including a publisher application. See [CosmosDB/README.md](./CosmosDB/README.md) for details.
-
-## How to Use
-
-Each demo contains its own README with setup and usage instructions. To get started, navigate to the demo folder and follow the instructions provided.
-
-## Prerequisites
-The demos are built and tested using below dependency versions. it may work for other versions that is greater than or equal to the versions below:
-- npm 11.2.0
-- Docker Desktop - Docker version 28.1.1, build 4eba377
-- .NET 8.0.408 SDK
-- Azure Functions Core Tools 4.0.7030
-
-## Using npm Scripts
-
-This repository uses npm scripts to simplify running the demos. After cloning the repository, follow these steps:
-
-1. Install dependencies:
-```powershell
-npm install
+## Build the Projects
+Build all projects using the following command:
+```bash
+npm run build:all
 ```
+Please refer to the specific README in each demo folder for detailed instructions.
 
-2. Build the demos:
-```powershell
-npm run build:all           # Build all demos
-npm run build:eventgrid     # Build EventGrid demo
-npm run build:api          # Build API demo
-npm run build:servicebus   # Build ServiceBus demo
-npm run build:blobstorage  # Build BlobStorage demo
-npm run build:cosmosdb     # Build CosmosDB demo
-```
+## Additional Information
 
-3. Available scripts for each demo:
-
-### EventGrid Demo
-```
+This project uses npm (v11.4+), Docker Deskt
+For more information, please check the individual demo documentation.
