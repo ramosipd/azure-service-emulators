@@ -17,9 +17,9 @@ npm run start:servicebus
 note: ensure to run the emulator first.
 
 ## Dependencies
+- .NET SDK 8.0.408+
+- Docker Engine
 - Azure Functions Core Tools
-- .NET runtime
-- Docker
 
 ## Additional Information
 - [DockerHub](https://hub.docker.com/r/microsoft/azure-messaging-servicebus-emulator)

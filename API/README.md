@@ -1,5 +1,8 @@
 # API Project
 
+## Overview
+This project demonstrates how to use an API emulator with WireMock.
+
 ## Scripts
 - `emulator:api:start`: Launch API emulator using Docker Compose.
 - `emulator:api:stop`: Stop API emulator using Docker Compose.
@@ -13,8 +16,8 @@ npm run start:api
 Note: Ensure to run the emulator first.
 
 ## Dependencies
-- .NET runtime
-- Docker Desktop
+- .NET SDK 8.0.408+
+- Docker Engine
 - npm
 
 ## Additional Information

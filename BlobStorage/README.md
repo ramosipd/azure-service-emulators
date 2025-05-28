@@ -1,5 +1,8 @@
 # BlobStorage Project
 
+## Overview
+This project demonstrates how to use the Blob Storage emulator with Azurite.
+
 ## Scripts
 - `emulator:blobstorage:start`: Start BlobStorage emulator using Docker Compose.
 - `emulator:blobstorage:stop`: Stop BlobStorage emulator using Docker Compose.
@@ -14,8 +17,8 @@ npm run start:blobstorage:publisher
 Note: Ensure to run the emulator first.
 
 ## Dependencies
-- .NET runtime
-- Docker Desktop
+- .NET SDK 8.0.408+
+- Docker Engine
 - Azure Functions Core Tools
 
 ## Additional Information

@@ -19,8 +19,8 @@ Please refer to the specific README in each demo folder for detailed instruction
 
 ## Additional Information
 
-This project uses:
-- DotNet SDK 8.408+
-- npm (v11.4+), 
-- Docker Desktop (28.1.x+)
+Dependencies:
+- DotNet SDK 8.0.408+
+- npm (v11.4+)
+- Docker Engine (28.1.x+)
 - Azure Function Core Tools (4.0.7+)
