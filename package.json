@@ -12,7 +12,8 @@
     "build:servicebus": "dotnet build ServiceBus/ServiceBusReceiver/ServiceBusReceiver.csproj && dotnet build ServiceBus/ServiceBusPublisher/ServiceBusPublisher.csproj",
     "build:blobstorage": "dotnet build BlobStorage/BlobStoragePublisher/BlobStoragePublisher.csproj && dotnet build BlobStorage/BlobStorageReceiver/BlobStorageReceiver.csproj",
     "build:cosmosdb": "dotnet build CosmosDB/CosmosDBPublisher/CosmosDBPublisher.csproj",
-    "build:all": "npm run build:eventgrid && npm run build:api && npm run build:servicebus && npm run build:blobstorage && npm run build:cosmosdb",
+    "build:sql": "dotnet build SQL/SQLPublisher/SQLPublisher.csproj && dotnet build SQL/SQLReceiver/SQLReceiver.csproj",
+    "build:all": "npm run build:eventgrid && npm run build:api && npm run build:servicebus && npm run build:blobstorage && npm run build:cosmosdb && npm run build:sql",
 
     "_eventgrid_commands": "EventGrid Commands",
     "start:eventgrid": "cd EventGrid/EventGridReceiver && func start",
@@ -39,7 +40,13 @@
 
     "_cosmosdb_commands": "CosmosDB Commands",
     "emulator:cosmosdb:start": "docker run --rm -it --publish 8081:8081 --publish 1234:1234 mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-preview --protocol https",
-    "start:cosmosdb": "dotnet run --project CosmosDB/CosmosDBPublisher/CosmosDBPublisher.csproj"
+    "start:cosmosdb": "dotnet run --project CosmosDB/CosmosDBPublisher/CosmosDBPublisher.csproj",
+
+    "_sql_commands": "SQL Commands",
+    "emulator:sql:start": "docker-compose -f SQL/docker-compose.yml up",
+    "emulator:sql:stop": "docker-compose -f SQL/docker-compose.yml down",
+    "start:sql:publisher": "dotnet run --project SQL/SQLPublisher/SQLPublisher.csproj",
+    "start:sql:receiver": "dotnet run --project SQL/SQLReceiver/SQLReceiver.csproj"
   },
   "keywords": [],
   "author": "",

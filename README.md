@@ -11,6 +11,7 @@ azure-service-emulators/
 ├── CosmosDB/              # Cosmos DB emulator demo using cosmos-db emulator
 ├── EventGrid/             # Event Grid emulator demo using third-party emulator
 ├── ServiceBus/            # Service Bus emulator demo using Microsoft's emulator
+├── SQL/                   # SQL Server emulator demo using Microsoft SQL Server
 ├── .gitignore             # Git ignore file
 ├── global.json            # .NET global configuration
 ├── package.json           # npm package configuration for workspace
@@ -31,6 +32,7 @@ Each demo project is independent and can be run separately. Please refer to the 
 - [CosmosDB](CosmosDB/README.md) - Demonstrates how to use the Cosmos DB emulator using [cosmos-db emulator (linux)](https://learn.microsoft.com/en-us/azure/cosmos-db/emulator-linux).
 - [EventGrid](EventGrid/README.md) - Demonstrates how to use the Event Grid emulator using third-party [emulator](https://github.com/workleap/wl-eventgrid-emulator).
 - [ServiceBus](ServiceBus/README.md) - Demonstrates how to use the [Service Bus emulator](https://hub.docker.com/r/microsoft/azure-messaging-servicebus-emulator).
+- [SQL](SQL/README.md) - Demonstrates how to use the SQL Server emulator using [Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server).
 
 ## 🏗️ Build the Projects
 Build all projects using the following command:
